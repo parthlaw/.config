@@ -1,0 +1,44 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "plan",
+  "provider": {
+    "litellm": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LiteLLM",
+      "options": {
+        "baseURL": "{env:LITELLM_ENDPOINT}",
+        "apiKey": "{env:LITELLM_API_KEY}"
+      },
+      "models": {
+        "gpt-4-1": {
+          "name": "gpt-4.1"
+        },
+        "claude-sonnet-4-5-20250929": {
+          "name": "claude-sonnet-4-5-20250929"
+        },
+        "gemini-2.5-pro": {
+          "name": "gemini-2.5-pro"
+        }
+      }
+    },
+    "bifrost":{
+      "npm": "@ai-sdk/anthropic",
+      "name": "BiFrost",
+      "options":{
+        "baseURL": "{env:ANTHROPIC_BASE_URL_OPENCODE}",
+        "apiKey": "{env:ANTHROPIC_AUTH_TOKEN}"
+      },
+      "models":{
+        "claude-sonnet-4-6":{
+          "name":"claude-sonnet-4-6"
+        },
+        "claude-sonnet-4-5":{
+          "name":"claude-sonnet-4-5"
+        }
+      }
+    } 
+  },
+  "plugin": [
+    "oh-my-opencode@latest"
+  ]
+}
