@@ -5,6 +5,9 @@
     "sisyphus": {
       "model": "bifrost/claude-sonnet-4-6"
     },
+    "prometheus": {
+      "model": "bifrost/claude-sonnet-4-6"
+    },
     "hephaestus": {
       "model": "bifrost/claude-sonnet-4-5"
     },
